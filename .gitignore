@@ -1,0 +1,5 @@
+*~
+logs/*
+lib/*
+htdocs/ext-4.0.0/*
+!htdocs/ext-4.0.0/COPYHERE

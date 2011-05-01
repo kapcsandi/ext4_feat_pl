@@ -1,0 +1,32 @@
+= test 1
+
+the created program should be run in all type of browsers
+technology for client side: extjs+ajax
+technology for server side: mod_perl
+technology for database:
+postgresql
+task 1
+create database table with 20 fields. create a perl script which puts random 5000 rows in the database table.
+task 2
+create an extjs grid which shows the first 25 results of the database table and all the fields, one column for one field.
+The grid must have pagination (first 25, before 25, next 25, last 25)
+task3
+create a button on the top of grid: excel report. if somebody clicks the excel report button the whole database table will
+be exported in an excel file at server side, and automatically downloaded to client computer
+the goal is the most effective and shortest code
+
+= test 2
+
+the created program should be run in all type of browsers
+technology for client side: extjs+ajax
+technology for server side: mod_perl
+technology for database:
+postgresql
+task 1
+create a menu system, with 5 main menus and 3 submenus for each main menu. create for a html page for each
+menuitem. all pages should have an extjs form fieldset which contains a label with the menu item name.
+task 2
+use an extjs solution to navigate between the pages, clicking on the menu system
+the goal is the most effective and shortest code and the most effective memory usage.
+
+
