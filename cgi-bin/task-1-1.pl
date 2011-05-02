@@ -1,21 +1,26 @@
 #!/usr/bin/perl -w
 use strict;
 use warnings;
+use CGI;
+use CGI::Carp qw(warningsToBrowser fatalsToBrowser); 
 
 require '../config/db.pl';
 
-print "Content-type: text/html\r\n\r\n";
-print "\n";
+my $r = CGI->new;
 
-print 'Connect to database<br />';
+print $r->header('text/html');
+
+print 'Connect to database.<br />';
 db_connect();
 
 my $table = 'tbl_with_20_fields';
 
-print "Create database table $table<br />";
+print "Create database table $table.<br />";
 create_db_table($table);
 
-print "Populate database table<br />";
+print "Populate database table.<br />";
 populate_table($table);
 
 print 'Done.';
+
+print $r->end_html();

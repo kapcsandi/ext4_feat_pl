@@ -9,7 +9,7 @@ print $r->header('text/html'),
   $r->start_html(
     -encoding => 'UTF-8',
     -lang => 'hu-HU',
-    -title => 'test 1, task-2',
+    -title => 'task-2-1',
     -script => [
       {
         -type => 'text/javascript',
@@ -31,8 +31,9 @@ print $r->header('text/html'),
       }
     ]
   ),
-  $r->h1('Test 1, Task 3'),
-  $r->div({-id=> 'report'}, ''),
-  $r->div({-id=> 'grid'}, '');
+  $r->h1('Test 2, Task 1'),
+  $r->div({-id=> 'toolbar'}, ''),
+  $r->div({-id=> 'page'}, ''),
+  $r->div({-id=> 'xhr'}, '');
 
 print $r->end_html();

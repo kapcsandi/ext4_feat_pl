@@ -10,7 +10,7 @@ my $fetch = fetch_rows();
 
 my @header = @main::fields;
 
-#
+# format header labels
 foreach( @header ) {
   s/_/\ /;
   s/(\w+)/\u\L$1/g;
@@ -18,7 +18,7 @@ foreach( @header ) {
 
 my @data;
 
-#
+# create an array (table) from result hash
 while ( my $res = $fetch->() ) {
   my @row = ( delete(%{$res}->{'id'}) );
 
@@ -28,14 +28,14 @@ while ( my $res = $fetch->() ) {
   push( @data, \@row );
 }
 
-#
+# create an excel
 my $excel = Spreadsheet::SimpleExcel->new();
 
-#
+# add a worksheet with header & data
 $excel->add_worksheet('Report',{-headers => \@header, -data => \@data});
 
 print "content-type: application/vnd.ms-excel\n"; 
 print "content-disposition: attachment; filename=report.xls\n\n";
 
-#
+# print xls content to standard out
 $excel->output_to_file('-');

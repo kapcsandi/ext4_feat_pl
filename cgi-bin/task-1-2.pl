@@ -9,7 +9,7 @@ print $r->header('text/html'),
   $r->start_html(
     -encoding => 'UTF-8',
     -lang => 'hu-HU',
-    -title => 'task-2',
+    -title => 'test 1, task-2',
     -script => [
       {
         -type => 'text/javascript',
@@ -31,7 +31,7 @@ print $r->header('text/html'),
       }
     ]
   ),
-  $r->h1('Task 2'),
+  $r->h1('Test 1, Task 2'),
   $r->div({-id=> 'grid'}, '');
 
 print $r->end_html();
